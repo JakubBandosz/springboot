@@ -15,6 +15,7 @@ public class AnimalPhoto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "photoid")
     private Integer photoId;
 
     @ManyToOne
@@ -30,7 +31,6 @@ public class AnimalPhoto {
     public AnimalPhoto() {
     }
 
-    
     public Integer getPhotoId() {
         return photoId;
     }
@@ -62,6 +62,4 @@ public class AnimalPhoto {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    
 }
